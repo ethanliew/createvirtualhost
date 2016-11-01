@@ -6,6 +6,9 @@
 	@Author	Ethan Liew <ethanliew.now@gmail.com>
 	@Since 	2016-11-01
 	@Version	1.0
+	
+	@Github	https://github.com/ethanliew/createvirtualhost.git
+	
 	@Disclaimer:
 	- Please read through the code and no warranty for any injuries on your existing device or settings
 	- Recommend for windows xampp user only 
@@ -123,7 +126,7 @@ $current .= '</VirtualHost>'.$lb;
 file_put_contents($file, $current);
 
 // display result to user
-echo "<div style=\"background-color:yellow; font-size:1.2em;\" >Thanks for using created-virtualhost.php by Ethan Liew <ethanliew.now@gmail.com>.</div><br/>";
+echo "<div style=\"background-color:yellow; font-size:1.2em;\" >Thanks for using created-virtualhost.php by Ethan Liew https://github.com/ethanliew/createvirtualhost.git</div><br/>";
 echo "<div style=\"background-color:yellow; font-size:1.2em;\" >Your development domain( $dev_domain )  at $doc_root had been created.</div><br/>";
 echo "<div style=\"background-color:yellow; font-size:1.2em;\">Please check your updated settings at below (".$file.")</div><br/>";
 echo "<xmp>";

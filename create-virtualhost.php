@@ -1,6 +1,7 @@
 <?php
 /* 
 	@Product	Simple PHP virtual host generator ( for xampp )
+	@NOTE	Right click on xampp icon and click on run as administrator!!!
 	@Example	http://localhost/create-virtualhost.php?xampproot=D:/xampp&devdomain=abc.dev&docroot=E:/abc
 
 	@Author	Ethan Liew <ethanliew.now@gmail.com>
@@ -126,6 +127,7 @@ $current .= '</VirtualHost>'.$lb;
 file_put_contents($file, $current);
 
 // restart apache
+//exec('echo adminpassword | runas /user:administrator fullPathToProgram',$output);
 //echo shell_exec('service httpd restart &');
 
 // display result to user

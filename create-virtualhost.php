@@ -125,9 +125,13 @@ $current .= '  </Directory>'.$lb;
 $current .= '</VirtualHost>'.$lb;
 file_put_contents($file, $current);
 
+// restart apache
+//echo shell_exec('service httpd restart &');
+
 // display result to user
-echo "<div style=\"background-color:yellow; font-size:1.2em;\" >Thanks for using created-virtualhost.php by Ethan Liew https://github.com/ethanliew/createvirtualhost.git</div><br/>";
+echo "<div style=\"background-color:yellow; font-size:1.2em;\" > Please restart your apache to start using it at http://$dev_domain </div>";
 echo "<div style=\"background-color:yellow; font-size:1.2em;\" >Your development domain( $dev_domain )  at $doc_root had been created.</div><br/>";
+echo "<div style=\"background-color:yellow; font-size:1.2em;\" >Thanks for using created-virtualhost.php by Ethan Liew https://github.com/ethanliew/createvirtualhost.git</div><br/>";
 echo "<div style=\"background-color:yellow; font-size:1.2em;\">Please check your updated settings at below (".$file.")</div><br/>";
 echo "<xmp>";
 echo file_get_contents($file);
